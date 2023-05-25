@@ -1,0 +1,24 @@
+{
+  "name": "sulhuf_employee_crud",
+  "version": "1.0.0",
+  "description": "task",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jab4jobs/Employee_Crud_Sulhuf.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jab4jobs/Employee_Crud_Sulhuf/issues"
+  },
+  "homepage": "https://github.com/jab4jobs/Employee_Crud_Sulhuf#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^7.2.1",
+    "nodemon": "^2.0.22"
+  }
+}
