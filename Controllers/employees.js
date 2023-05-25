@@ -6,7 +6,19 @@ const sendSuccess = function (successMsg, statuscode, data) {
 
 const getAllEmp = async (req, res) => {
     try {
-        const employee= await Models.employees.find();
+        let criteria = {};
+        if(req.query.name) {
+            criteria.name = new RegExp(req.query.name, 'i');
+        }
+        let limit = req.query.count && parseInt(req.query.count) ? parseInt(req.query.count) : 20;
+            let options = {
+                lean: true,
+                skip: req.query.pageNo ? (req.query.pageNo - 1) * limit : 0, 
+                limit: limit,
+                sort: {name : 1}
+            };
+       
+        const employee= await Models.employees.find(criteria, options);
         
         res.json(sendSuccess('Get All Employees', 200, employee));
     } catch(error) {

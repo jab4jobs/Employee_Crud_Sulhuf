@@ -27,7 +27,8 @@ Create New Employee: http://localhost:8000/employee/create     POST
   }
   
 
-Get All List: http://localhost:8000/employee    GET
+Get All List: http://localhost:8000/employee?name=ja&count=10&pageNo=1    GET
+Query Params: name, count, pageNo
 
 Get Employee by Id: http://localhost:8000/employee/63c6567418a5c2329ef5d3e4   GET
 
